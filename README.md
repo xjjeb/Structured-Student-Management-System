@@ -5,3 +5,6 @@
 
 ## Version 0.2
  Finishing the works of the Authorization function and some slight debugging
+
+## Version 0.3
+ Initializing the structure of the Student Management Function, initializing the structure of the login/signup/logoff flow
