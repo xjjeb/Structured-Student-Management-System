@@ -8,3 +8,6 @@
 
 ## Version 0.3
  Initializing the structure of the Student Management Function, initializing the structure of the login/signup/logoff flow
+
+## Version 1.0.0
+ Finishing the starting works of **_Struct_SMS_**, finishing the Entire structure.
