@@ -22,6 +22,7 @@ int authorization(struct admin_info * admin_tab)
         auth_prompt_op();
 
         scanf("%d", &operation_code);
+        getchar();
     }
     return 0;
 }
@@ -100,17 +101,6 @@ int seek_name(struct admin_info * tab, char * name)
     return 0;
 }
 
-void stu_man(struct stu_info * stu_tab)  //should be looping inside 
-{
-    int operation_code; //if logging off, directly goes back to authorization page
-    man_prompt_op();
-    scanf("%d", &operation_code);
-    while(log_off(operation_code) != 1){    //inner looping while not logging off
-        printf("\nTHIS IS PROCESSING!\n");  //later replaced by some steps.
-        man_prompt_op();
-        scanf("%d", &operation_code);
-    }
-}
 
 int log_off(int op_code)
 {
@@ -147,7 +137,97 @@ void auth_prompt_op()
 void man_prompt_op()
 {
     printf("Please input 1 if you want to add students to the table\n");
-    printf("Please input 2 if you want to search for a certain student or delete a student or modify the infos of the student.\n");
+    printf("Please input 2 if you want to search for a certain student.\n");
     printf("Please input 3 if you want to go through all the students\n");
     printf("Please input others to LOG OFF the SMS\n");
+}
+
+void stu_man(struct stu_info ** stu_tab_ptr)  //should be looping inside 
+{
+    char temp_name[41];
+    int operation_code; //if logging off, directly goes back to authorization page
+    int search_op_code;
+    man_prompt_op();
+    scanf("%d", &operation_code);
+    getchar();
+    while(log_off(operation_code) != 1){    //inner looping while not logging off
+        if (operation_code == 1){
+            stu_add(stu_tab_ptr);
+        }
+        else if (operation_code == 2){
+            printf("\nPlease input the name of the student to be searched:");
+            get_str(temp_name, 41);
+            if (search(*stu_tab_ptr, temp_name) != NULL){
+                printf("SEARCH SUCCEEDED! Here's the infos about %s\n", temp_name);
+                info_show(*stu_tab_ptr);
+            }
+            else{
+                printf("%s CAN'T BE FOUND in our student info table!\n", temp_name);
+            }
+        }
+        else{
+            go_through(*stu_tab_ptr);
+        }
+        man_prompt_op();
+        scanf("%d", &operation_code);
+        getchar();
+    }
+}
+
+void stu_add(struct stu_info ** stu_ptr)
+{
+    char name[41];
+    char gender[7];
+    int age;
+    float gpa;
+    printf("Please input the name of the student to be added:");
+    get_str(name, 41);
+    printf("Please input the gender of the student:(MALE/FEMALE)");//MAYBE SHOULD BE RESTRICTED LATER?
+    get_str(gender, 7);
+    printf("Please input the age of the student:");
+    scanf("%d", &age);
+    getchar();
+    printf("Please input the gpa of the student:");
+    scanf("%f", &gpa);
+    getchar();
+    struct stu_info * curr = (struct stu_info *)malloc(sizeof(struct stu_info));
+    strcpy(curr->name, name);
+    strcpy(curr->gender, gender);
+    curr->age = age;
+    curr->gpa = gpa;
+    curr->next = *stu_ptr;
+    *stu_ptr = curr;
+    printf("\nStudent Information Successfully Added!\n");
+    stu_tab_len ++;
+}
+
+void info_show(struct stu_info * stu_ptr)
+{
+    printf("NAME:%s\n", stu_ptr->name);
+    printf("GENDER: %s\n", stu_ptr->gender);
+    printf("AGE:%d\n", stu_ptr->age);
+    printf("GPA:%f\n", stu_ptr->gpa);
+}
+
+void go_through(struct stu_info * head)
+{
+    struct stu_info * tmp_head = head;
+    while (tmp_head != NULL){
+        printf("%20s%8s%4d%5.2f\n", tmp_head->name, tmp_head->gender, tmp_head->age, tmp_head->gpa);
+        tmp_head = tmp_head->next;
+    }
+}
+
+struct stu_info * search(struct stu_info * stu_tab, char * name)
+{
+    struct stu_info * ret_ptr = NULL;
+    struct stu_info * ptr = stu_tab;
+    while (ptr != NULL){
+        if (strcmp(ptr->name, name) == 0){
+            ret_ptr = ptr;
+            break;
+        }
+        ptr = ptr->next;
+    }
+    return ret_ptr;
 }
