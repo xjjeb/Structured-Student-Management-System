@@ -4,7 +4,7 @@ int authorization(struct admin_info * admin_tab)
     printf("Welcome to the Student Management System!\n");
     prompt_op();
     scanf("%d", &operation_code);
-    while(operation_code == 0 || operation_code == 1)
+    while(operation_code == 0 || operation_code == 1)//only valid routes of auth() return 1 
     {
         if (operation_code == 0){
             if (log_in(admin_tab)){
