@@ -3,11 +3,12 @@
 
 int main()
 {
-    struct admin_info admin_tab[100];
+    static struct admin_info admin_tab[100];
     struct stu_info * stu_tab = (struct stu_info *)malloc(sizeof(struct stu_info));
     if (authorization(admin_tab) == 1){
+        printf("\nAuthorization Succeeded!");
         //if authorized, we can start student info management
     }
-    printf("Student Management System Exited");
+    printf("Student Management System Exited.\nGood Bye!");
     return 0;
 }

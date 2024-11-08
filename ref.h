@@ -20,9 +20,10 @@ struct stu_info
 int authorization(struct admin_info * admin_tab);
 int log_in(struct admin_info * admin_tab);
 int sign_up(struct admin_info * admin_tab);
-int seek(struct admin_info tab, int len);
+int seek_all(struct admin_info * tab, char * name, char * password);
+int seek_name(struct admin_info * tab, char * name);
 
 void get_str(char * str, int len);
 void prompt_op();
 
-int admin_tab_len = 0;
+static int admin_tab_len = 0;
