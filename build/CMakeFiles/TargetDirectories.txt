@@ -1,0 +1,4 @@
+D:/C_FILES/STRUCT_SMS/build/CMakeFiles/MyProject111.dir
+D:/C_FILES/STRUCT_SMS/build/CMakeFiles/RUN_TESTS.dir
+D:/C_FILES/STRUCT_SMS/build/CMakeFiles/ALL_BUILD.dir
+D:/C_FILES/STRUCT_SMS/build/CMakeFiles/ZERO_CHECK.dir

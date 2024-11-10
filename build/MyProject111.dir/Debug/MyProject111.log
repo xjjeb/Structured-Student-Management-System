@@ -1,0 +1,56 @@
+﻿  Building Custom Rule D:/C_FILES/STRUCT_SMS/CMakeLists.txt
+  main.c
+  functions.c
+  正在生成代码...
+D:\C_FILES\STRUCT_SMS\functions.c(7,5): warning C4013: “printf”未定义；假设外部返回 int
+D:\C_FILES\STRUCT_SMS\functions.c(8,5): warning C4013: “auth_prompt_op”未定义；假设外部返回 int
+D:\C_FILES\STRUCT_SMS\functions.c(9,5): warning C4013: “scanf”未定义；假设外部返回 int
+D:\C_FILES\STRUCT_SMS\functions.c(10,5): warning C4013: “getchar”未定义；假设外部返回 int
+D:\C_FILES\STRUCT_SMS\functions.c(14,17): warning C4013: “log_in”未定义；假设外部返回 int
+D:\C_FILES\STRUCT_SMS\functions.c(19,17): warning C4013: “sign_up”未定义；假设外部返回 int
+D:\C_FILES\STRUCT_SMS\functions.c(41,5): warning C4013: “get_str”未定义；假设外部返回 int
+D:\C_FILES\STRUCT_SMS\functions.c(44,9): warning C4013: “seek_all”未定义；假设外部返回 int
+D:\C_FILES\STRUCT_SMS\functions.c(70,13): warning C4013: “strcmp”未定义；假设外部返回 int
+D:\C_FILES\STRUCT_SMS\functions.c(81,5): warning C4013: “strcpy”未定义；假设外部返回 int
+D:\C_FILES\STRUCT_SMS\functions.c(81,21): error C2037: “name”的左侧部分指定未定义的结构/联合“admin_info”
+D:\C_FILES\STRUCT_SMS\functions.c(82,21): error C2037: “password”的左侧部分指定未定义的结构/联合“admin_info”
+D:\C_FILES\STRUCT_SMS\functions.c(90,23): error C2037: “name”的左侧部分指定未定义的结构/联合“admin_info”
+D:\C_FILES\STRUCT_SMS\functions.c(90,57): error C2037: “password”的左侧部分指定未定义的结构/联合“admin_info”
+D:\C_FILES\STRUCT_SMS\functions.c(100,18): error C2036: “admin_info *”: 未知的大小
+D:\C_FILES\STRUCT_SMS\functions.c(100,18): error C2037: “name”的左侧部分指定未定义的结构/联合“admin_info”
+D:\C_FILES\STRUCT_SMS\functions.c(118,6): error C2371: “get_str”: 重定义；不同的基类型
+D:\C_FILES\STRUCT_SMS\functions.c(133,6): error C2371: “auth_prompt_op”: 重定义；不同的基类型
+D:\C_FILES\STRUCT_SMS\functions.c(158,13): warning C4013: “stu_add”未定义；假设外部返回 int
+D:\C_FILES\STRUCT_SMS\functions.c(163,17): warning C4013: “search”未定义；假设外部返回 int
+D:\C_FILES\STRUCT_SMS\functions.c(163,52): error C2065: “NULL”: 未声明的标识符
+D:\C_FILES\STRUCT_SMS\functions.c(165,17): warning C4013: “info_show”未定义；假设外部返回 int
+D:\C_FILES\STRUCT_SMS\functions.c(172,13): warning C4013: “go_through”未定义；假设外部返回 int
+D:\C_FILES\STRUCT_SMS\functions.c(180,6): error C2371: “stu_add”: 重定义；不同的基类型
+D:\C_FILES\STRUCT_SMS\functions.c(196,49): warning C4013: “malloc”未定义；假设外部返回 int
+D:\C_FILES\STRUCT_SMS\functions.c(196,56): error C2027: 使用了未定义类型“stu_info”
+D:\C_FILES\STRUCT_SMS\functions.c(196,30): warning C4312: “类型强制转换”: 从“int”转换到更大的“stu_info *”
+D:\C_FILES\STRUCT_SMS\functions.c(197,12): error C2037: “name”的左侧部分指定未定义的结构/联合“stu_info”
+D:\C_FILES\STRUCT_SMS\functions.c(198,12): error C2037: “gender”的左侧部分指定未定义的结构/联合“stu_info”
+D:\C_FILES\STRUCT_SMS\functions.c(199,5): error C2037: “age”的左侧部分指定未定义的结构/联合“stu_info”
+D:\C_FILES\STRUCT_SMS\functions.c(200,5): error C2037: “gpa”的左侧部分指定未定义的结构/联合“stu_info”
+D:\C_FILES\STRUCT_SMS\functions.c(201,5): error C2037: “next”的左侧部分指定未定义的结构/联合“stu_info”
+D:\C_FILES\STRUCT_SMS\functions.c(207,6): error C2371: “info_show”: 重定义；不同的基类型
+D:\C_FILES\STRUCT_SMS\functions.c(209,25): error C2037: “name”的左侧部分指定未定义的结构/联合“stu_info”
+D:\C_FILES\STRUCT_SMS\functions.c(210,28): error C2037: “gender”的左侧部分指定未定义的结构/联合“stu_info”
+D:\C_FILES\STRUCT_SMS\functions.c(211,24): error C2037: “age”的左侧部分指定未定义的结构/联合“stu_info”
+D:\C_FILES\STRUCT_SMS\functions.c(212,24): error C2037: “gpa”的左侧部分指定未定义的结构/联合“stu_info”
+D:\C_FILES\STRUCT_SMS\functions.c(215,6): error C2371: “go_through”: 重定义；不同的基类型
+D:\C_FILES\STRUCT_SMS\functions.c(218,24): error C2065: “NULL”: 未声明的标识符
+D:\C_FILES\STRUCT_SMS\functions.c(218,21): warning C4047: “!=”:“stu_info *”与“int”的间接级别不同
+D:\C_FILES\STRUCT_SMS\functions.c(219,37): error C2037: “name”的左侧部分指定未定义的结构/联合“stu_info”
+D:\C_FILES\STRUCT_SMS\functions.c(219,53): error C2037: “gender”的左侧部分指定未定义的结构/联合“stu_info”
+D:\C_FILES\STRUCT_SMS\functions.c(219,71): error C2037: “age”的左侧部分指定未定义的结构/联合“stu_info”
+D:\C_FILES\STRUCT_SMS\functions.c(219,86): error C2037: “gpa”的左侧部分指定未定义的结构/联合“stu_info”
+D:\C_FILES\STRUCT_SMS\functions.c(220,20): error C2037: “next”的左侧部分指定未定义的结构/联合“stu_info”
+D:\C_FILES\STRUCT_SMS\functions.c(224,19): error C2040: “search”:“stu_info *(stu_info *,char *)”与“int ()”的间接寻址级别不同
+D:\C_FILES\STRUCT_SMS\functions.c(226,33): error C2065: “NULL”: 未声明的标识符
+D:\C_FILES\STRUCT_SMS\functions.c(228,19): error C2065: “NULL”: 未声明的标识符
+D:\C_FILES\STRUCT_SMS\functions.c(228,16): warning C4047: “!=”:“stu_info *”与“int”的间接级别不同
+D:\C_FILES\STRUCT_SMS\functions.c(229,20): error C2037: “name”的左侧部分指定未定义的结构/联合“stu_info”
+D:\C_FILES\STRUCT_SMS\functions.c(233,15): error C2037: “next”的左侧部分指定未定义的结构/联合“stu_info”
+D:\C_FILES\STRUCT_SMS\functions.c(226,23): warning C4047: “初始化”:“stu_info *”与“int”的间接级别不同
