@@ -35,6 +35,3 @@ void info_show(struct stu_info * stu_ptr);
 void go_through(struct stu_info * head);
 
 struct stu_info * search(struct stu_info * stu_tab, char * name);
-
-static int admin_tab_len = 0;
-static int stu_tab_len = 0;
